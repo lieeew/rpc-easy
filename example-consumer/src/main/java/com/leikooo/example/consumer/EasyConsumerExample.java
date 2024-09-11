@@ -3,6 +3,7 @@ package com.leikooo.example.consumer;
 
 import com.leikooo.Interface.UserService;
 import com.leikooo.domain.User;
+import com.leikooo.proxy.ServiceProxyFactory;
 
 /**
  * 简易服务消费者示例
@@ -11,9 +12,9 @@ import com.leikooo.domain.User;
 public class EasyConsumerExample {
 
     public static void main(String[] args) {
-        UserService userService = new UserServiceProxy();
+        UserService userService = ServiceProxyFactory.getProxy(UserService.class);
         User user = new User();
-        user.setName("哈哈哈");
+        user.setName("xxx");
         // 调用
         User newUser = userService.getUser(user);
         if (newUser != null) {
