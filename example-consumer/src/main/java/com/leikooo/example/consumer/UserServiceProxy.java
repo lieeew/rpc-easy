@@ -43,4 +43,9 @@ public class UserServiceProxy implements UserService {
         }
         return null;
     }
+
+    @Override
+    public String saveUser(User user) {
+        return "bbbbb";
+    }
 }

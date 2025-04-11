@@ -10,4 +10,6 @@ import com.leikooo.domain.User;
 public interface UserService {
 
     User getUser(User user);
+
+    String saveUser(User user);
 }
